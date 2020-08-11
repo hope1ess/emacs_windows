@@ -10,7 +10,7 @@
 (require 'cl)
 
 (defvar my/packages '(
-
+		company	     
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -32,3 +32,6 @@
    (exec-path-from-shell-initialize))
 
 ;;----------------------------------------------------------------------------
+
+;; company-mode
+(global-company-mode 1)

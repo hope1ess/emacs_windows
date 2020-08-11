@@ -2,12 +2,26 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-
-;; 解决中文字体卡顿
 (package-initialize)
 
+;; 解决中文字体卡顿
 (setq inhibit-compacting-font-caches t)
 
 
 (load-file "~/.emacs.d/lisp/init-better-defaults.el")
 (load-file "~/.emacs.d/lisp/init-packages.el")
+
+
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(company-idle-delay 0.1)
+ '(company-minimum-prefix-length 1))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
