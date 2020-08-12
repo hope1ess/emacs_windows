@@ -10,7 +10,14 @@
 (require 'cl)
 
 (defvar my/packages '(
-		company	     
+		      company
+		      ;; theme
+		      dracula-theme
+		      ;; better editor
+		      helm
+		      swiper
+		      smartparens
+		      hungry-delete
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -30,8 +37,21 @@
  ;; Find Executable Path on OS X
  (when (memq window-system '(mac ns))
    (exec-path-from-shell-initialize))
+		    
 
 ;;----------------------------------------------------------------------------
 
 ;; company-mode
 (global-company-mode 1)
+
+;; load-thme
+(load-theme 'dracula 1)
+
+
+(require 'helm)
+
+
+(require 'smartparens-config)
+(add-hook 'c-mode-hook 'smartparens-mode);;在c-mode中使用括号补全
+(add-hook 'c++-mode-hook 'smartparens-mode);;在c++-mode中使用括号补全
+(add-hook 'emacs-lisp-mode-hook 'smartparens-mode)

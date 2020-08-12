@@ -8,6 +8,9 @@
 ;; 显示行号
 (global-linum-mode 1)
 
+;; 关闭启动帮助画面
+(setq inhibit-splash-screen 1)
+
 ;; 快速打开配置文件
 (defun open-init-file()
   (interactive)

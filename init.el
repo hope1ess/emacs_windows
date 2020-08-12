@@ -7,9 +7,9 @@
 ;; 解决中文字体卡顿
 (setq inhibit-compacting-font-caches t)
 
-
-(load-file "~/.emacs.d/lisp/init-better-defaults.el")
 (load-file "~/.emacs.d/lisp/init-packages.el")
+(load-file "~/.emacs.d/lisp/init-better-defaults.el")
+(load-file "~/.emacs.d/lisp/init-kbd.el")
 
 
 (custom-set-variables
@@ -18,7 +18,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(company-idle-delay 0.1)
- '(company-minimum-prefix-length 1))
+ '(company-minimum-prefix-length 1)
+ '(custom-safe-themes
+   (quote
+    ("dcdd1471fde79899ae47152d090e3551b889edf4b46f00df36d653adc2bf550d" default))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
