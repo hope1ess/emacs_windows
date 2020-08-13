@@ -18,6 +18,12 @@
 		      swiper
 		      smartparens
 		      hungry-delete
+		      nyan-mode  ;; 彩虹猫
+		      ;; Major Mode
+		      js2-mode
+		      web-mode
+		      ;; Minor Mode
+		      
 		      ) "Default packages")
 
 (setq package-selected-packages my/packages)
@@ -55,3 +61,34 @@
 (add-hook 'c-mode-hook 'smartparens-mode);;在c-mode中使用括号补全
 (add-hook 'c++-mode-hook 'smartparens-mode);;在c++-mode中使用括号补全
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+
+
+;; 待开启，性能销号较高
+;;(require 'nyan-mode)
+;;(nyan-mode t)
+
+
+;; web编辑器设置
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+
+(defun my-web-mode-hook ()
+  "Hooks for Web mode."
+  (setq web-mode-markup-indent-offset 2)
+  (setq web-mode-code-indent-offset 2)
+  (setq web-mode-css-indent-offset 2)
+)
+(add-hook 'web-mode-hook  'my-web-mode-hook)    
+(setq tab-width 2)
+
+(setq web-mode-enable-current-column-highlight t)
+(setq web-mode-enable-current-element-highlight t)
+
+(set (make-local-variable
+      'company-backends) '((
+			    company-web-html
+			    company-dabbrev-code
+			    company-dabbrev)))
+
