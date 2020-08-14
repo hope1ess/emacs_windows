@@ -61,6 +61,7 @@
 (add-hook 'c-mode-hook 'smartparens-mode);;在c-mode中使用括号补全
 (add-hook 'c++-mode-hook 'smartparens-mode);;在c++-mode中使用括号补全
 (add-hook 'emacs-lisp-mode-hook 'smartparens-mode)
+(add-hook 'web-mode 'smartparens-mode)
 
 
 ;; 待开启，性能销号较高
@@ -69,10 +70,11 @@
 
 
 ;; web编辑器设置
+(require 'web-mode)
 (add-to-list 'auto-mode-alist '("\\.ts\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.html?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 (defun my-web-mode-hook ()
   "Hooks for Web mode."
