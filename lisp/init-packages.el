@@ -68,6 +68,8 @@
 ;;(require 'nyan-mode)
 ;;(nyan-mode t)
 
+(global-undo-tree-mode)
+
 
 ;; web编辑器设置
 (require 'web-mode)

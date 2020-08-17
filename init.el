@@ -21,7 +21,10 @@
  '(company-minimum-prefix-length 1)
  '(custom-safe-themes
    (quote
-    ("dcdd1471fde79899ae47152d090e3551b889edf4b46f00df36d653adc2bf550d" default))))
+    ("dcdd1471fde79899ae47152d090e3551b889edf4b46f00df36d653adc2bf550d" default)))
+ '(package-selected-packages
+   (quote
+    (undo-tree company dracula-theme helm swiper smartparens hungry-delete nyan-mode js2-mode web-mode))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
