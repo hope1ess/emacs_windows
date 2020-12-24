@@ -13,6 +13,7 @@
 		      company
 		      ;; theme
 		      dracula-theme
+		      spacemacs-theme
 		      ;; better editor
 		      helm
 		      swiper
@@ -51,7 +52,8 @@
 (global-company-mode 1)
 
 ;; load-thme
-(load-theme 'dracula 1)
+;;(load-theme 'dracula 1)
+(load-theme 'spacemacs-dark 1)
 
 
 (require 'helm)

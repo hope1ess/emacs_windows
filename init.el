@@ -2,7 +2,7 @@
 ;; installed packages.  Don't delete this line.  If you don't want it,
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory comments.
-(package-initialize)
+;;(package-initialize)
 
 ;; 解决中文字体卡顿
 (setq inhibit-compacting-font-caches t)
@@ -20,11 +20,9 @@
  '(company-idle-delay 0.1)
  '(company-minimum-prefix-length 1)
  '(custom-safe-themes
-   (quote
-    ("dcdd1471fde79899ae47152d090e3551b889edf4b46f00df36d653adc2bf550d" default)))
+   '("bffa9739ce0752a37d9b1eee78fc00ba159748f50dc328af4be661484848e476" "dcdd1471fde79899ae47152d090e3551b889edf4b46f00df36d653adc2bf550d" default))
  '(package-selected-packages
-   (quote
-    (undo-tree company dracula-theme helm swiper smartparens hungry-delete nyan-mode js2-mode web-mode))))
+   '(undo-tree company dracula-theme helm swiper smartparens hungry-delete nyan-mode js2-mode web-mode)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
